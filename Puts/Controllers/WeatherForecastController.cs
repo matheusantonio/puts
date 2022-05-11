@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Puts.Domain;
 
-namespace Puts.API.Controllers
+namespace Puts.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -22,10 +21,6 @@ namespace Puts.API.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            var teste = new Class1();
-
-            teste.teste();
-
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
